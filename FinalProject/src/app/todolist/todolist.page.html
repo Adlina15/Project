@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar class="ion-text-center" color="bluish">
+    <ion-title>To Do List</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="createTodolist(todolist)">
+        <ion-icon slot="start" name="cloud-done"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-icon slot="start" name="checkmark-circle"></ion-icon>
+    <ion-input type="text" [(ngModel)]="todolist.task" placeholder="Add a task" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-icon slot="start" name="calendar-clear"></ion-icon>
+    <ion-input type="text" [(ngModel)]="todolist.dueDate"  placeholder="Set a due date" required></ion-input>
+  </ion-item>
+
+  <ion-fab horizontal="end" vertical="bottom" slot="fixed">
+    <ion-fab-button color="bluish"  [routerLink]="['/view-todolist']">
+      <ion-icon name="eye"></ion-icon>
+    </ion-fab-button>
+    </ion-fab>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="bluish">
+  </ion-toolbar>
+</ion-footer>

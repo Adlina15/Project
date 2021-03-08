@@ -1,0 +1,29 @@
+.list-header {
+    font-size: 1.3rem;
+    margin: 9px;
+    font-weight: bold;
+  }
+  ion-list {
+    ion-icon[name="trash-outline"],
+    ion-icon[name="create-outline"] {
+      font-size: 2rem;
+    }
+    ion-icon[name="trash-outline"] {
+      color: red;
+    }
+  }
+
+  ion-item {
+    h1{
+      font-size: 1.1rem;
+      color : blue;
+      font-weight: bold;
+    }
+    h2{
+        font-size: 1.1rem;
+        color :red;
+      }
+    h3{
+        font-size: 1.1rem;
+      }
+  }

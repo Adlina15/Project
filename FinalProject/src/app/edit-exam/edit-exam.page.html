@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar class="ion-text-center" color="bluish">
+    <ion-title>Marks</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+  <ion-item>
+    <ion-label position="stacked">Subject</ion-label> 
+     <ion-input type="text" [(ngModel)]="exam.subject"></ion-input>
+   </ion-item>
+
+   <ion-item>
+    <ion-label position="stacked">Marks</ion-label> 
+     <ion-input type="decimal" [(ngModel)]="exam.mark"></ion-input>
+   </ion-item>
+
+   <ion-item>
+    <ion-label position="stacked">Description</ion-label> 
+     <ion-input type="text" [(ngModel)]="exam.description"></ion-input>
+   </ion-item>
+
+   <br>
+   <br>
+
+   <ion-button color="bluish" (click)="updateExam(exam)" expand="block" fill="solid" >
+    <ion-icon slot="end" name="pencil"></ion-icon>
+    UPDATE
+  </ion-button>
+
+  </div>
+   
+
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="bluish">
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-footer>

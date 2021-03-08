@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar class="ion-text-center" color="bluish">
+    <ion-title>Update Class</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+      </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+<div class="ion-padding">
+  <ion-item>
+    <ion-label>Day of the Class</ion-label>
+    
+       <ion-select value="General" [(ngModel)]="class.day" okText="save"  cancelText="cancel">
+      <ion-select-option value="Monday">Monday</ion-select-option>
+      <ion-select-option value="Tuesday">Tuesday</ion-select-option>
+      <ion-select-option value="Wednesday">Wednesday</ion-select-option>
+      <ion-select-option value="Thursday">Thursday</ion-select-option>
+     </ion-select>
+  </ion-item>
+
+   <ion-item>
+     <ion-input [(ngModel)]="class.subject" type="text" placeholder="Subject" required></ion-input>
+   </ion-item>
+
+   <ion-item>
+    <ion-input [(ngModel)]="class.starttime" type="text" placeholder="Start Time | AM/PM" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input [(ngModel)]="class.endtime" type="text" placeholder="End Time | AM/PM" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+   <ion-label position="stacked">Room</ion-label> 
+    <ion-input [(ngModel)]="class.room" type="text" placeholder="optional" ></ion-input>
+  </ion-item>
+
+  <br>
+  <br>
+
+  <ion-button color="bluish" (click)="updateClass(class)" expand="block" fill="solid" >
+    <ion-icon slot="end" name="pencil"></ion-icon>
+    UPDATE
+  </ion-button>
+   
+  </div>
+
+
+
+</ion-content>
+
+
+<ion-footer>
+  <ion-toolbar class="ion-text-center" color="bluish">
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-footer>
+

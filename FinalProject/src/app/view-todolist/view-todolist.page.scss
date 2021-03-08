@@ -1,0 +1,32 @@
+
+    .list-header {
+      font-size: 1.5rem;
+      margin: 9px;
+      font-weight: bold;
+    }
+    ion-list {
+      ion-icon[name="trash-outline"],
+      ion-icon[name="create-outline"] {
+        font-size: 2rem;
+      }
+      ion-icon[name="trash-outline"] {
+        color:red;
+      }
+
+      
+ion-item {
+    h2{
+      &.checked {
+        text-decoration: line-through red;
+      }
+      font-size: 1.1rem;
+    }
+    h3{
+        &.checked {
+          text-decoration: line-through red;
+        }
+        font-size: 1.1rem;
+        color: coral;
+      }
+  }
+}

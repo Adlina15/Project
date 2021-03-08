@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar class="ion-text-center" color="bluish">
+    <ion-title>Tasks</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<div class="list-header">List of Tasks</div>
+  
+  <ion-list lines="none">
+    <ion-item-sliding *ngFor="let todolist of todolists; trackBy: trackByFn">
+    <ion-item class="no-padding" (click)="toggleCheck(todolist)">
+
+    <ion-label>
+    <ion-text>
+    <h2 [class.checked]="todolist.checked">Task : {{todolist.task}}</h2>
+      </ion-text>
+    <h3 [class.checked]="todolist.checked">Due date by {{todolist.dueDate}}</h3>
+    </ion-label>
+  </ion-item>
+
+  <ion-item-options >
+    <button ion-button color="danger" (click)="deleteTodo(todolist.id)" >
+      <ion-icon name="trash-outline"></ion-icon>
+    </button>
+    <button ion-button color="success" [routerLink]="['/edit-todolist', todolist.id]">
+      <ion-icon name="create-outline"></ion-icon>
+    </button>
+  </ion-item-options>
+
+</ion-item-sliding>
+</ion-list>
+
+<ion-fab vertical="bottom" horizontal="end" slot="fixed" class="ion-text-right">
+  <ion-fab-button color="bluish" [routerLink]="['/todolist']" >
+  <ion-icon name="add"></ion-icon>
+  </ion-fab-button>
+ </ion-fab>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="bluish">
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-footer>
+

@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar color="bluish" class="ion-text-center">
+    <ion-title>View All Event</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+  <ion-content>
+
+    <div class="list-header">List of Class</div>
+
+  
+     <ion-list lines="none">
+     <ion-item-sliding *ngFor="let class of classes">
+     <ion-item class="no-padding">
+     <ion-label>
+     <h1>{{class.day}} </h1>
+     <h2>{{class.subject}}</h2>
+     <h3>{{class.starttime}} - {{class.endtime}} </h3>
+    <h4>{{class.room}}</h4>
+   </ion-label>
+   </ion-item>
+
+   </ion-item-sliding>
+  </ion-list>
+  
+  
+  <div class="list-header1">List of Tasks</div>
+  
+  <ion-list lines="none">
+    <ion-item-sliding *ngFor="let todolist of todolists; trackBy: trackByFn">
+    <ion-item class="no-padding">
+
+    <ion-label>
+    <ion-text>
+    <h2>Task : {{todolist.task}}</h2>
+      </ion-text>
+    <h3>Due date by {{todolist.dueDate}}</h3>
+    </ion-label>
+  </ion-item>
+
+</ion-item-sliding>
+</ion-list>
+
+   </ion-content>
+
+   <ion-footer>
+     <ion-toolbar color="bluish">
+       <ion-title></ion-title>
+     </ion-toolbar>
+   </ion-footer>
+
+

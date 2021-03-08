@@ -1,0 +1,90 @@
+<ion-header>
+  <ion-toolbar class="ion-text-center" color="bluish">
+    <ion-title>
+      Dashboard
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+ <!-- Icon top -->
+
+
+<ion-grid class="mygrid" padding>
+<ion-row class="myrow">
+  <ion-col class="mycols">
+  <div class="myBTNs"   [routerLink]="['/view-class']" >
+       
+          <ion-icon class="largeIcon" name="desktop-outline" item-start></ion-icon>
+       <p class="myHeader">Class  </p>     
+          
+        
+  </div> 
+  </ion-col>
+
+  <ion-col class="mycols1">
+    <div class="myBTNs1"   [routerLink]="['/view-todolist']">
+         
+            <ion-icon class="largeIcon" name="list-outline" item-start></ion-icon>
+         <p class="myHeader">Task   </p>     
+            
+          
+    </div> 
+    </ion-col>
+</ion-row>
+
+<ion-row class="myrow">
+  <ion-col class="mycols">
+  <div class="myBTNs"   [routerLink]="['/view-exam']">
+       
+          <ion-icon class="largeIcon" name="school-outline" item-start></ion-icon>
+       <p class="myHeader">Exam   </p>     
+          
+        
+  </div> 
+  </ion-col>
+
+  <ion-col class="mycols1">
+    <div class="myBTNs1"   [routerLink]="['/faq']" >
+         
+            <ion-icon class="largeIcon" name="chatbubbles-outline" item-start></ion-icon>
+         <p class="myHeader">FAQ </p>     
+            
+          
+    </div> 
+    </ion-col>
+</ion-row>
+
+<ion-row class="myrow">
+  <ion-col class="mycols">
+  <div class="myBTNs"   (click)="toggleDarkMode()" >
+       
+          <ion-icon class="largeIcon" name="moon-outline" item-start></ion-icon>
+       <p class="myHeader">Dark Mode  </p>           
+        
+  </div> 
+  </ion-col>
+
+  <ion-col class="mycols1">
+    <div class="myBTNs1"   [routerLink]="['/view-all']" >
+         
+            <ion-icon class="largeIcon" name="folder-outline" item-start></ion-icon>
+         <p class="myHeader">View All Event</p>            
+    </div> 
+    </ion-col>
+
+  
+</ion-row>
+
+
+  </ion-grid>
+
+
+  
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar  color="bluish">
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-footer>
